@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Al Azhar - Sekolah Kejuruan Unggulan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #198754; /* Hijau */
+            --secondary-color: #ffc107; /* Kuning */
+            --light-color: #ffffff; /* Putih */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary-color);
+        }
+        
+        .bg-secondary-custom {
+            background-color: var(--secondary-color);
+        }
+        
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+        
+        .text-secondary-custom {
+            color: var(--secondary-color);
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #0d6e41;
+            color: var(--light-color);
+        }
+        
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+            color: #212529;
+            border: none;
+        }
+        
+        .btn-secondary-custom:hover {
+            background-color: #e0a800;
+            color: #212529;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?school');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .facility-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .achievement-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 50px 0 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: var(--light-color);
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            color: #212529;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary-custom navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://via.placeholder.com/50x50" class="me-2">
+                <span>SMK Al Azhar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jurusan">Jurusan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#facilities">Fasilitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Prestasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Selamat Datang di SMK Al Azhar</h1>
+            <h3 class="lead mb-5">Mencetak generasi unggul yang berakhlak mulia, berprestasi, dan siap bersaing di dunia kerja</h3>
+            <a href="#about" class="btn btn-secondary-custom btn-lg px-4 py-2">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Profil Sekolah</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://source.unsplash.com/800x600/?school-building" alt="Gedung SMK Al Azhar" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4 text-primary-custom">Tentang SMK Al Azhar</h3>
+                    <p class="mb-4">SMK Al Azhar didirikan pada tahun 2005 dengan visi menjadi lembaga pendidikan kejuruan terdepan yang menghasilkan lulusan berkompeten, berakhlak mulia, dan siap kerja. Sekolah kami menerapkan kurikulum yang terintegrasi dengan nilai-nilai keislaman.</p>
+                    <p class="mb-4">Dengan dukungan tenaga pengajar profesional dan kurikulum yang disesuaikan dengan kebutuhan industri, kami berkomitmen untuk memberikan pendidikan berkualitas tinggi bagi para siswa.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-secondary-custom me-2"></i>
+                                <span>Akreditasi B</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-secondary-custom me-2"></i>
+                                <span>Guru Profesional</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-secondary-custom me-2"></i>
+                                <span>Fasilitas Lengkap</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-secondary-custom me-2"></i>
+                                <span>Kerjasama Industri</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jurusan Section -->
+    <section class="py-5 bg-light" id="jurusan">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Program Keahlian</h2>
+                <p class="lead mb-5">SMK Al Azhar menawarkan berbagai program keahlian yang disesuaikan dengan kebutuhan dunia industri</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://www.google.com/imgres?q=tkj&imgurl=https%3A%2F%2Fi0.wp.com%2Ftkj.smkislam1blitar.sch.id%2Fwp-content%2Fuploads%2F2023%2F01%2Fezgif-3-6604c0051b-scaled.webp%3Ffit%3D2560%252C1280%26ssl%3D1&imgrefurl=https%3A%2F%2Ftkj.smkislam1blitar.sch.id%2Fsmk-jurusan-tkj-peluang-karir-dan-rata-rata-gaji-lulusannya%2F&docid=QjIT8DKn9TaXUM&tbnid=eGcL0Go5GEAAzM&vet=12ahUKEwjRt4Ox5e-MAxUV1TgGHctxMOoQM3oFCIABEAA..i&w=2560&h=1280&hcb=2&ved=2ahUKEwjRt4Ox5e-MAxUV1TgGHctxMOoQM3oFCIABEAA" class="card-img-top" alt="TKJ">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">Teknik Komputer dan Jaringan</h5>
+                            <p class="card-text">Program keahlian yang mempelajari tentang perakitan komputer, instalasi jaringan, dan troubleshooting perangkat keras dan lunak.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://www.google.com/imgres?q=rpl&imgurl=https%3A%2F%2Fsmkn1anggana.sch.id%2Fstorage%2F2023%2F11%2F202307062306-main.cropped_1688659608.jpg&imgrefurl=https%3A%2F%2Fsmkn1anggana.sch.id%2Fprogram-keahlian-rpl%2F&docid=fOPnHYeso5e-xM&tbnid=qt74h8Z2rUg4ZM&vet=12ahUKEwj_i4PM5e-MAxW1yzgGHaklKgQQM3oECGwQAA..i&w=1280&h=853&hcb=2&ved=2ahUKEwj_i4PM5e-MAxW1yzgGHaklKgQQM3oECGwQAA" class="card-img-top" alt="RPL">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">Rekayasa Perangkat Lunak</h5>
+                            <p class="card-text">Program keahlian yang mempelajari tentang pengembangan aplikasi, pemrograman, dan manajemen basis data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://source.unsplash.com/600x400/?multimedia" class="card-img-top" alt="Multimedia">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">Teknik Kendaraan Ringan</h5>
+                            <p class="card-text">Program keahlian yang mempelajari tentang Kendaraan,dan Mobil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-4">
+                    <div class="card h-100">
+                        <img src="https://source.unsplash.com/600x400/?accounting" class="card-img-top" alt="Akuntansi">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">Akuntansi</h5>
+                            <p class="card-text">Program keahlian yang mempelajari tentang pencatatan keuangan, perpajakan, dan analisis laporan keuangan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-4">
+                    <div class="card h-100">
+                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsmkn2magetan.sch.id%2Ftata-busana%2F&psig=AOvVaw1V0RbPRyI-nCnRAsPwhO9R&ust=1745556881926000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKjBnqHw74wDFQAAAAAdAAAAABAE" class="card-img-top" alt="OTKP">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">Tata Busana</h5>
+                            <p class="card-text">Program keahlian yang mempelajari tentang menjahit dan mendesain pakaian.</p>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="py-5" id="facilities">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Fasilitas</h2>
+                <p class="lead mb-5">SMK Al Azhar menyediakan fasilitas modern untuk mendukung proses pembelajaran</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-light rounded shadow-sm">
+                        <div class="facility-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4 class="mb-3">Laboratorium Komputer</h4>
+                        <p>Dilengkapi dengan komputer terbaru dan software industri untuk mendukung pembelajaran praktik siswa.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-light rounded shadow-sm">
+                        <div class="facility-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4 class="mb-3">Perpustakaan</h4>
+                        <p>Menyediakan ribuan koleksi buku, jurnal, dan sumber belajar digital untuk mendukung kegiatan akademik.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-light rounded shadow-sm">
+                        <div class="facility-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4 class="mb-3">Bengkel Praktik</h4>
+                        <p>Fasilitas praktik yang lengkap untuk mengasah keterampilan teknis sesuai dengan jurusan masing-masing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-light rounded shadow-sm">
+                        <div class="facility-icon">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <h4 class="mb-3">Musholla</h4>
+                        <p>Tempat ibadah yang nyaman untuk mendukung kegiatan keagamaan dan pembentukan akhlak siswa.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-light rounded shadow-sm">
+                        <div class="facility-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h4 class="mb-3">Sarana Olahraga</h4>
+                        <p>Lapangan olahraga multifungsi untuk mendukung kegiatan ekstrakurikuler dan pengembangan bakat siswa.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-light rounded shadow-sm">
+                        <div class="facility-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4 class="mb-3">Koneksi Internet</h4>
+                        <p>Jaringan internet cepat yang tersedia di seluruh area sekolah untuk mendukung pembelajaran digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-5 bg-light" id="achievements">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Prestasi</h2>
+                <p class="lead mb-5">Berbagai prestasi yang telah diraih oleh siswa dan siswi SMK Al Azhar</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="mb-3">Juara LKS Nasional</h4>
+                        <p>Juara 1 Lomba Kompetensi Siswa tingkat Nasional bidang Web Design tahun 2022.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4 class="mb-3">Olimpiade Sains</h4>
+                        <p>Medali emas dan perak Olimpiade Sains Kota bidang bahasa inggris dan informatika.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <div class="achievement-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="mb-3">Kerjasama Industri</h4>
+                        <p>Menjalin kerjasama dengan 9 perusahaan nasional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary-custom text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Bergabunglah dengan SMK Al Azhar</h2>
+            <p class="lead mb-4">Daftarkan diri Anda sekarang dan menjadi bagian dari keluarga besar SMK Al Azhar</p>
+            <a href="#contact" class="btn btn-secondary-custom btn-lg">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Kontak Kami</h2>
+                <p class="lead mb-5">Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded shadow-sm">
+                        <h4 class="mb-4 text-primary-custom">Informasi Kontak</h4>
+                        <div class="mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-map-marker-alt text-secondary-custom me-3 mt-1"></i>
+                                <p>Jl. Raya Sempu No 456, Sempu, Banyuwangi</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-phone text-secondary-custom me-3 mt-1"></i>
+                                <p>(021) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-envelope text-secondary-custom me-3 mt-1"></i>
+                                <p>info@smkalazhar.sch.id</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-clock text-secondary-custom me-3 mt-1"></i>
+                                <p>Senin - Sabtu: 07.00 - 13.00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-light p-4 rounded shadow-sm">
+                        <h4 class="mb-4 text-primary-custom">Kirim Pesan</h4>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Subjek</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Masukkan subjek">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Pesan</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Masukkan pesan"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">SMK Al Azhar</h4>
+                    <p>Mencetak generasi unggul yang berakhlak mulia, berprestasi, dan siap bersaing di dunia kerja.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">Link Cepat</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Profil</a></li>
+                        <li><a href="#jurusan">Jurusan</a></li>
+                        <li><a href="#facilities">Fasilitas</a></li>
+                        <li><a href="#achievements">Prestasi</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Informasi Kontak</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Jl. Raya Sempu No 456, Sempu, Banyuwangi</li>
+                        <li><i class="fas fa-phone me-2"></i> (021) 1234-5678</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@smkalazhar.sch.id</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="border-color: rgba(255, 255, 255, 0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 SMK Al Azhar. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
